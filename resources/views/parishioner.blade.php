@@ -21,11 +21,12 @@
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>
-                                        <th>Rendering engine</th>
-                                        <th>Browser</th>
-                                        <th>Platform(s)</th>
-                                        <th>Engine version</th>
-                                        <th>CSS grade</th>
+                                        <th>Name</th>
+                                        <th>Date of Birth</th>
+                                        <th>Phone</th>
+                                        <th>Mobile</th>
+                                        <th>Blood Group</th>
+                                        <th>Unit</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -37,10 +38,11 @@
                                     @foreach ($parishioners as $parishioner)
                                              <tr class="gradeU">
                                         <td>{{ $parishioner->name}}</td>
-                                        <td>All others</td>
-                                        <td>-</td>
+                                        <td>{{ $parishioner->date_of_birth}}</td>
+                                        <td>{{ $parishioner->phone_no}}</td>
+                                               <td>{{ $parishioner->mob_no}}</td>
+                                        <td class="center">{{ $parishioner->blood_group}}</td>
                                         <td class="center">-</td>
-                                        <td class="center">U</td>
                                     </tr>
                                       @endforeach
                                 </tbody>
